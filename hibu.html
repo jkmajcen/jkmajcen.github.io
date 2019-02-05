@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://web-2-tel.com/sdk?identifier=c03044d656f04d49a2ff926ded5fb35d" async></script>
+
+    <script type='text/javascript' src='https://reports.yellowbook.com/analytics/js/ybDynamicPhoneInsertion.js'></script>
+</head>
+<body>
+    <span class="phone">(555) 555-5555</span>
+</body>
+
+<script>
+
+    ybFindPhNums = ['18004994058', '18004994058', '18004994058', '18004994058', '18082067252', '18082067252', '18082067252', '18082067252', '18083793565', '18083793565', '18083793565', '18084653037', '18084653037', '18084653037', '18084653037', '18083793565', '18084653038', '18084653038', '18084653038', '18084653038', '18084653040', '18084653040', '18084653040', '18084653040', '18083793577', '18083793577', '18083793577', '18083793577'];
+    ybReplacePhNums = ['18882132977', '18776517401', '18552613833', '18887146329', '18084277482', '18087075671', '18084277497', '18087310333', '18083793099', '18083793130', '18083793133', '18084277553', '18084456168', '18088685284', '18087075003', '18083793781', '18084277397', '18084277502', '18084279833', '18087312888', '18087747012', '18086472434', '18084277355', '18089997007', '18083793834', '18083793122', '18086502398', '18085182915'];
+    
+        if (typeof dmAPI != 'undefined') {
+            dmAPI.runOnReady('dpni', function() {
+                setTimeout(ybFun_ReplaceText, 500);
+            });
+            dmAPI.subscribeEvent(dmAPI.EVENTS.SHOW_POPUP, function(data) {
+                setTimeout(ybFun_ReplaceText, 500);
+                console.log('dmAPI.EVENTS.SHOW_POPUP' + data);
+            });
+        } else {
+            window.onload = function() {
+                setTimeout(ybFun_ReplaceText, 500);
+            }
+        }
+    
+    </script>
+</html>
